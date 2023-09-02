@@ -1,0 +1,16 @@
+#! /bin/bash
+
+apt update
+apt install software-properties-common
+add-apt-repository ppa:deadsnakes/ppa
+apt install python3.10
+apt install python3.10-dev
+apt install python3.10-venv
+python3.10 -m venv "tff-venv"
+source "tff-venv/bin/activate"
+python -V
+python3.10 -m pip install --upgrade pip
+python3.10 -m pip install --upgrade tensorflow-federated==0.44.0
+python3.10 -m pip install nest-asyncio
+python3.10 -m pip install pandas
+apt install screen
